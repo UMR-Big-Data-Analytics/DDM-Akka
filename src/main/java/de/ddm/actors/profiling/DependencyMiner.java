@@ -195,7 +195,7 @@ public class DependencyMiner extends AbstractBehavior<DependencyMiner.Message> {
 		dependencyWorker.tell(new DependencyWorker.TaskMessage(this.largeMessageProxy, 42));
 
 		// At some point, I am done with the discovery. That is when I should call my end method. Because I do not work on a completable task yet, I simply call it after some time.
-		if (System.currentTimeMillis() - this.startTime > 2000000)
+		if (System.currentTimeMillis() - this.startTime > 120000)
 			this.end();
 		return this;
 	}

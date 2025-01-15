@@ -23,8 +23,7 @@ public class Main {
 
 			guardian.tell(new Guardian.StartMessage());
 
-			waitForInput(">>> Press ENTER to exit <<<");
-
+			 // This shutdown message must be removed to avoid the shutdown of the actor system before any work has been done.
 			guardian.tell(new Guardian.ShutdownMessage());
 		}
 	}
